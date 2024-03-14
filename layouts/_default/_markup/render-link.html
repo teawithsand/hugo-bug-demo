@@ -1,0 +1,13 @@
+<div>
+    Just display value: {{ .Destination  }} {{/* Works fine*/}}
+    <br />
+    Printf it: {{ printf "%s" .Destination }}
+    <br />
+    Prefix check: {{ hasPrefix .Destination "XXX" }} 
+</div>
+{{ if gt (len .Destination ) 16}}
+    {{ slicestr .Destination  0 16 }}
+{{ end }}
+
+{{/* It would also break when passed to url.Prase or some regex functions, as this is what I've tried.*/}}
+{{/*The solution is to use {{% shortcode %}} rather than {{< shortcode>}}*/}}
