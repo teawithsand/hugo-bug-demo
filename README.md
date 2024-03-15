@@ -9,3 +9,11 @@ The HAHAHUGOSHORTCOD… text is apparently also received by `strings.FindRE` fun
 Workaround is to use %% tags.
 
 Given how tricky it is to find this behavior, I can't tell if it's a bug or a feature.
+
+## Update
+
+[It's a feature apparently…](https://discourse.gohugo.io/t/destination-from-rel-or-relref-does-has-unexpect-prefix/42848).
+
+This unique fragment is then stringreplaced, which is why printing full text works, but not parsing it…
+
+Give me a break plz.
